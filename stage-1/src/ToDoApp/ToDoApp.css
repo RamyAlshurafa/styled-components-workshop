@@ -61,7 +61,7 @@
   vertical-align: middle;
 }
 
-.to-do-app__to-do-app--primary {
+.to-do-app__button--primary {
   border-color: #60c1da;
   background-color: #60c1da;
 }
@@ -72,13 +72,13 @@
 }
 
 .to-do-app__list {
-  position: relative;
   border: 1px solid #fff
 }
 
 .to-do-app__row {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 70%;
   margin: 2px auto;
 }

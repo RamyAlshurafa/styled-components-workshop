@@ -53,9 +53,9 @@ class TodoApp extends React.Component{
     return (
       <div className="to-do-app">
       <h4 className="to-do-app__heading to-do-app__heading--sub">Add your To-Do's here</h4>
-        <div className="to-do-app__header">
+        <header className="to-do-app__header">
           <h1 className="to-do-app__heading to-do-app__heading--main">To Do {this.state.data.length}</h1>
-        </div>
+        </header>
 
         <form
           className="to-do-app__form"
@@ -69,30 +69,30 @@ class TodoApp extends React.Component{
             className="to-do-app__input"
             ref={node => {
              inputRef = node;
-            }} />
+            }}
+          />
 
           <button
-            className="to-do-app__button to-do-app__to-do-app--primary"
+            className="to-do-app__button to-do-app__button--primary"
             type='submit'
           >
             Add
           </button>
-          <br />
         </form>
           
         <div className="to-do-app__list">
           {
             this.state.data.map((todo) => (
-            <div key={todo.id} className="to-do-app__row">
-              <p href="#" className="to-do-app__text">{todo.text}</p>
-              <button
-                className="to-do-app__button to-do-app__button--destructive"
-                onClick={() => {this.handleRemove(todo.id)}}
-              >
-                delete
-              </button>
-          </div>
-          ))
+              <div key={todo.id} className="to-do-app__row">
+                <p className="to-do-app__text">{todo.text}</p>
+                <button
+                  className="to-do-app__button to-do-app__button--destructive"
+                  onClick={() => {this.handleRemove(todo.id)}}
+                >
+                  delete
+                </button>
+              </div>
+            ))
           }
         </div>
 
