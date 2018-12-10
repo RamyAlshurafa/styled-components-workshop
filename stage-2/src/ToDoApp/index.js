@@ -63,14 +63,13 @@ class TodoApp extends React.Component{
     const { addTodo } = this
     let inputRef = this.inputRef
     return (
-      <ToDoWrapper className="to-do-app">
-      <SubHeading className="to-do-app__heading to-do-app__heading--sub">Add your To-Do's here</SubHeading>
-        <Header className="to-do-app__header">
-          <MainHeading className="to-do-app__heading to-do-app__heading--main">To Do {this.state.data.length}</MainHeading>
+      <ToDoWrapper>
+      <SubHeading>Add your To-Do's here</SubHeading>
+        <Header>
+          <MainHeading >To Do {this.state.data.length}</MainHeading>
         </Header>
 
         <Form
-          className="to-do-app__form"
           onSubmit={(e) => {
             e.preventDefault();
             addTodo(inputRef.value);
@@ -78,27 +77,24 @@ class TodoApp extends React.Component{
           }}>
           
           <Input
-            className="to-do-app__input"
             ref={node => {
              inputRef = node;
             }}
           />
 
           <AddButton
-            className="to-do-app__button to-do-app__button--primary"
             type='submit'
           >
             Add
           </AddButton>
         </Form>
           
-        <ToDoList className="to-do-app__list">
+        <ToDoList>
           {
             this.state.data.map((todo) => (
-              <ToDoRow key={todo.id} className="to-do-app__row">
-                <Text className="to-do-app__text">{todo.text}</Text>
+              <ToDoRow>
+                <Text>{todo.text}</Text>
                 <DeleteButton
-                  className="to-do-app__button to-do-app__button--destructive"
                   onClick={() => {this.handleRemove(todo.id)}}
                 >
                   delete
