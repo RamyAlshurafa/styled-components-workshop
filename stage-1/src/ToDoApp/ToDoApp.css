@@ -1,0 +1,88 @@
+.to-do-app {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.to-do-app__heading--sub{
+ color: #61dafb;
+  font-size: 20px;
+  font-family: 'Bree Serif', serif;
+  font-weight: 100;
+  margin: 10px auto;
+}
+
+.to-do-app__header {
+  background: #2980b9;
+  height: 50px;
+}
+
+.to-do-app__heading--main {
+  color: #fff;
+  line-height: 50px;
+  font-size: 32px;
+  font-family: 'Bree Serif', serif;
+  font-weight: 100;
+}
+
+.to-do-app__form {
+  min-height: 50px;
+  background: #ced3d4de;
+}
+
+.to-do-app__input {
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  margin: 0.85em 0;
+  padding: 6px 24px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #60c1da;
+  border: solid 1px #60c1da;
+  outline: none;
+}
+
+.to-do-app__button {
+  border: solid 1px #fff;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: 600;
+  margin: 0.85em 0;
+  padding: 6px 24px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.to-do-app__to-do-app--primary {
+  border-color: #60c1da;
+  background-color: #60c1da;
+}
+
+.to-do-app__button--destructive {
+  background-color: #e90c27;
+  border-color: #e90c27;
+}
+
+.to-do-app__list {
+  position: relative;
+  border: 1px solid #fff
+}
+
+.to-do-app__row {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 2px auto;
+}
+
+.to-do-app__text {
+  color: #fff
+}
